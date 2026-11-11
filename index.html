@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aitkin County Elite Sharpshooters</title>
+<meta name="description" content="ACES is a youth clay target team in central Minnesota competing in SCTP trap, skeet and sporting clays. Beginners welcome. Learn about the team and how to join.">
+<meta property="og:title" content="Aitkin County Elite Sharpshooters (ACES)">
+<meta property="og:description" content="Youth clay target team in central Minnesota. Beginners welcome.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: same brand as the ACES rankings site. Charcoal hero holding the logo sticker,
+   warm light body for families to read, logo orange for calls to action and step numbers. */
+:root{
+  --paper:#f7f6f3; --card:#ffffff; --ink:#1c1c1d; --muted:#5a5b5d; --line:#e3e0dc;
+  --char:#1f1f20; --char-ink:#f4f2ef; --char-muted:#c9c7c3;
+  --orange:#e85a24; --orange-ink:#ffffff; --orange-text:#b8431a; --orange-soft:#fde6db;
+  --f-display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#131314; --card:#1c1c1e; --ink:#ecebe8; --muted:#a4a3a0; --line:#323234;
+  --char:#0b0b0c; --char-ink:#f1efec; --char-muted:#bdbbb7;
+  --orange:#ff7440; --orange-ink:#1a0d07; --orange-text:#ff8a5c; --orange-soft:#3a1f14; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.04;margin:0;text-transform:uppercase;text-wrap:balance}
+h2{font-size:clamp(2.1rem,4.6vw,3.1rem);font-weight:800}
+h3{font-size:1.45rem;font-weight:700;letter-spacing:.02em}
+p{margin:0;max-width:65ch}
+.eyebrow{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.16em;font-size:.9rem;font-weight:700;color:var(--orange-text)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:1.05rem;padding:12px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--orange);cursor:pointer}
+.btn.primary{background:var(--orange);color:var(--orange-ink)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+
+/* header */
+.top{position:sticky;top:0;z-index:5;background:var(--char);color:var(--char-ink);border-bottom:3px solid var(--orange)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:1.6rem;letter-spacing:.08em;color:var(--orange)}
+.brand img{width:34px;height:34px;object-fit:contain}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--f-display);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.98rem}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;color:var(--orange)}
+nav a.cta{color:var(--orange);opacity:1}
+
+/* hero */
+.hero{background:var(--char);color:var(--char-ink);padding-block:48px 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero .wrap > *{min-width:0}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:800}
+.hero h1 span{color:var(--orange)}
+.hero p{margin-top:18px;font-size:1.2rem;color:var(--char-muted)}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.logo-wrap{display:grid;place-items:center}
+.logo-wrap img{width:100%;max-width:360px;height:auto;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+
+section{padding-block:68px;border-bottom:1px solid var(--line)}
+section.alt{background:var(--card)}
+.sec-head{display:grid;gap:12px;margin-bottom:34px}
+.sec-head p{font-size:1.1rem;color:var(--muted)}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.grid3 > *,.grid2 > *{min-width:0}
+.card{display:grid;gap:8px;align-content:start;padding-top:16px;border-top:4px solid var(--ink)}
+.card p{color:var(--muted)}
+.card.accent{border-top-color:var(--orange)}
+
+/* SCTP */
+.sctp{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.sctp > *{min-width:0}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+section.alt .tbl{background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:1rem}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;font-weight:700;color:var(--muted)}
+td b{font-family:var(--f-display);font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;padding:5px 12px;border-radius:3px;background:var(--orange-soft)}
+.chip.dim{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.stack{display:grid;gap:20px}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* getting started paths */
+.path{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:6px;padding:24px;display:grid;gap:10px;align-content:start}
+.path p{color:var(--muted)}
+.facts{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.facts li{display:grid;grid-template-columns:78px 1fr;gap:12px;border-top:1px solid var(--line);padding-top:8px}
+.facts span{font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;color:var(--orange-text);padding-top:2px}
+
+/* year calendar */
+.year{list-style:none;margin:0;padding:0;display:grid}
+.year li{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
+.year li:last-child{border-bottom:1px solid var(--line)}
+.year li > *{min-width:0}
+.year .when{font-family:var(--f-display);font-weight:800;font-size:1.5rem;text-transform:uppercase;color:var(--orange-text);line-height:1.1}
+.year h3{margin-bottom:6px}
+.year p{color:var(--muted)}
+.year .where{font-size:.92rem;margin-top:6px;color:var(--ink);font-weight:500}
+.year li.big{background:var(--orange-soft);border-radius:6px;padding-left:16px;padding-right:16px;margin-inline:-16px}
+
+/* ACES score callout */
+.callout{background:var(--char);color:var(--char-ink);border-radius:8px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:30px}
+.callout p{color:var(--char-muted)}
+.callout h3{color:var(--char-ink)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+details{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 18px}
+section.alt details{background:var(--paper)}
+summary{cursor:pointer;font-family:var(--f-display);font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:.02em;padding:12px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--orange);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:14px;color:var(--muted)}
+
+/* join */
+.join{background:var(--orange);color:#1c1c1d}
+.join .eyebrow{color:#1c1c1d}
+.join .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.join .wrap > *{min-width:0}
+.join p{font-size:1.1rem}
+.contact{background:#1f1f20;color:#f4f2ef;border-radius:8px;padding:26px;display:grid;gap:14px}
+.contact h3{color:#f4f2ef}
+.copy{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.copy code{font-family:ui-monospace,Consolas,monospace;font-size:.95rem;background:#2c2c2e;border-radius:4px;padding:8px 10px;user-select:all;word-break:break-all}
+.copy button{font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:8px 14px;border:1px solid #6d6e70;border-radius:4px;background:transparent;color:#f4f2ef;cursor:pointer}
+.contact .btn{justify-self:start}
+.contact .btn.ghost{color:#f4f2ef}
+
+footer{padding-block:30px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:860px){
+  .hero .wrap,.sctp,.join .wrap,.callout{grid-template-columns:1fr}
+  .logo-wrap{order:-1}
+  .logo-wrap img{max-width:220px}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .year li{grid-template-columns:1fr;gap:6px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ACES home"><img src="logo.png" alt="">ACES</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#sctp">SCTP</a><a href="#approach">Our approach</a><a href="#start">Get started</a><a href="#season">Schedule</a><a href="#faq">FAQ</a><a class="cta" href="#join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Youth clay target team · Aitkin County, Minnesota</div>
+      <h1>Every shooter <span>counts</span></h1>
+      <p>The Aitkin County Elite Sharpshooters (ACES) are a youth trap, skeet and sporting clays team for students in grades 5–12, based at the Wealthwood Rod &amp; Gun Club in central Minnesota. We compete in the Scholastic Clay Target Program (SCTP), and we're always looking for new shooters, whether they've never held a shotgun or have shot for years.</p>
+      <div class="cta">
+        <a class="btn primary" href="#join">Get in touch</a>
+        <a class="btn ghost" href="#sctp">What is SCTP?</a>
+      </div>
+    </div>
+    <div class="logo-wrap"><img src="logo.png" alt="ACES logo: Aitkin County Elite Sharpshooters"></div>
+  </div>
+</div>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Who we are</div>
+      <h2>A team, not just a few top shooters</h2>
+      <p>ACES is a youth shotgun sports team registered with the Scholastic Clay Target Program, made up of students and families from around Aitkin County. Our shooters range from first-year beginners to experienced varsity athletes, and they practice, travel and compete together. Many also shoot for their school's High School Clay Target League team or with 4-H.</p>
+    </div>
+    <div class="grid3">
+      <div class="card accent"><h3>Safety first, always</h3><p>Safe gun handling and range rules come before anything else, at every practice and every competition.</p></div>
+      <div class="card"><h3>Every shooter counts</h3><p>We measure ourselves by how the whole team does, so the newest shooter's improvement matters as much as the best shooter's score.</p></div>
+      <div class="card"><h3>Grow at your own pace</h3><p>Beginners learn the basics with coaching and patience. Experienced shooters get the competition and training to keep improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sctp" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The program</div>
+      <h2>What is SCTP?</h2>
+      <p>The Scholastic Clay Target Program is a national youth shooting program run by the Scholastic Shooting Sports Foundation (SSSF). Teams across the country practice and compete in clay target shooting, and athletes are grouped by grade so they compete against shooters their own age.</p>
+    </div>
+    <div class="sctp">
+      <div class="stack">
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Division</th><th>Who shoots in it</th></tr></thead>
+            <tbody>
+              <tr><td><b>Rookie</b></td><td>5th grade and under</td></tr>
+              <tr><td><b>Intermediate</b></td><td>Middle school. Entry Level is for newer shooters; Advanced is for those with experience.</td></tr>
+              <tr><td><b>Senior</b></td><td>High school, grades 9–12, in Junior Varsity or Varsity.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">ACES takes shooters in grades 5–12. SCTP sets the exact division rules each year, and our coaches help each athlete get placed correctly.</p>
+      </div>
+      <div class="stack">
+        <div class="card accent">
+          <h3>What we shoot</h3>
+          <p>Trap, skeet and sporting clays are the main events. Experienced shooters can also try handicap trap and doubles.</p>
+          <div class="chips"><span class="chip">Trap</span><span class="chip">Skeet</span><span class="chip">Sporting clays</span><span class="chip dim">Handicap trap</span><span class="chip dim">Doubles</span></div>
+        </div>
+        <div class="card">
+          <h3>Where it leads</h3>
+          <p>The season builds toward the Minnesota SCTP state shoots in spring and SCTP Nationals each July at the Cardinal Shooting Center in Marengo, Ohio: six days of trap, skeet, sporting clays, super sporting, trap yardage and doubles. Nationals also hosts Last Competitor Standing, where 700+ kids shoot trap from the 27-yard line until one is left.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How we approach things</div>
+      <h2>Coaching the whole team</h2>
+      <p>Clay target shooting rewards patience, focus and practice. Here's what families can expect from ACES.</p>
+    </div>
+    <div class="grid2">
+      <div class="card accent"><h3>Safety is taught first</h3><p>New shooters learn safe handling, range commands and etiquette before they compete. Eye and ear protection are required for everyone on the line.</p></div>
+      <div class="card"><h3>Coaching for every level</h3><p>Coaches work with beginners on stance, mounting the gun and following the target, and help experienced shooters fine-tune their game.</p></div>
+      <div class="card"><h3>Families are part of the team</h3><p>Parents and guardians are welcome at practices and shoots. Many help with travel, scoring and keeping things running.</p></div>
+      <div class="card"><h3>Works alongside other teams</h3><p>Already shooting for a High School Clay Target League team or with 4-H? Many of our shooters do both. More rounds means more coaching and more competition.</p></div>
+    </div>
+    <div class="callout">
+      <div class="stack" style="gap:8px">
+        <div class="eyebrow">The ACES Score</div>
+        <h3>We built our own way to measure a team</h3>
+        <p>Most team scores add up the top few shooters. The ACES Score, created by our team, looks at every shooter's scores, so a team gets better when its newest shooters improve. We publish rankings for teams across the country.</p>
+      </div>
+      <a class="btn primary" href="https://bennelli25.github.io/aces-rankings/" target="_blank" rel="noopener">See the rankings</a>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Getting started</div>
+      <h2>Two ways in</h2>
+      <p>Every ACES shooter starts in the spring at our home range, the Wealthwood Rod &amp; Gun Club. Which path you take depends on whether this is your first year.</p>
+    </div>
+    <div class="grid2">
+      <div class="path">
+        <div class="eyebrow">First-year shooters</div>
+        <h3>Community Education classes</h3>
+        <p>Three two-hour sessions in March and April that teach safety and the basics. Pick the time that works: Saturday afternoons or Sunday late mornings.</p>
+        <ul class="facts">
+          <li><span>Who</span>Students in grades 5–12 who are new to the sport</li>
+          <li><span>When</span>Late March to late April (2026: Saturdays 3–5 pm or Sundays 11 am–1 pm)</li>
+          <li><span>Sign up</span>Through Community Education, where the classes are posted each spring</li>
+        </ul>
+      </div>
+      <div class="path">
+        <div class="eyebrow">Returning shooters</div>
+        <h3>Advanced Class practices</h3>
+        <p>For shooters in their second year and up. Four Sunday practices in March and April get everyone ready for the spring state shoots.</p>
+        <ul class="facts">
+          <li><span>Who</span>Grades 5–12, second year and above</li>
+          <li><span>When</span>Late March to late April, Sundays 4–7 pm</li>
+          <li><span>Cost</span>$35 SCTP registration fee</li>
+          <li><span>Sign up</span>Register with the team by email</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:18px">After spring classes, every ACES shooter can join summer practices and team events.</p>
+  </div>
+</section>
+
+<section id="season">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">A year with ACES</div>
+      <h2>The season at a glance</h2>
+      <p>Each year follows a similar pattern. Dates shown are from 2026; email us for the coming season's schedule.</p>
+    </div>
+    <ol class="year">
+      <li><div class="when">March–April</div><div><h3>Spring classes and practices</h3><p>Community Education classes for first-year shooters and Advanced Class practices for returning shooters.</p><p class="where">Wealthwood Rod &amp; Gun Club</p></div></li>
+      <li><div class="when">April</div><div><h3>MN SCTP State Shoot: trap and skeet</h3><p>100 targets of trap one day and 100 of skeet the next. Shooters can enter one event or both. (2026: April 18–19)</p><p class="where">Minneapolis Gun Club</p></div></li>
+      <li><div class="when">May</div><div><h3>Day of Clays and the ACES Open</h3><p>Day of Clays is a 100-target sporting clays fundraiser shoot. The ACES Open doubles as the MN SCTP State Sporting Clays Shoot, with trap, skeet and sporting clays. (2026: May 2 and May 30–31)</p><p class="where">Rice Creek sporting clays · Wealthwood Rod &amp; Gun Club</p></div></li>
+      <li><div class="when">June–August</div><div><h3>Summer practices</h3><p>Monday practices, 4–8 pm, from early June through late August. Shooters heading to Nationals also practice Fridays, 4–8 pm, from June into July.</p><p class="where">Wealthwood Rod &amp; Gun Club</p></div></li>
+      <li class="big"><div class="when">July</div><div><h3>SCTP National Championships</h3><p>Six days of trap, skeet, sporting clays, super sporting, trap yardage and doubles, plus Last Competitor Standing. (2026: July 13–18)</p><p class="where">Cardinal Shooting Center, Marengo, Ohio</p></div></li>
+      <li><div class="when">September</div><div><h3>Annual ACES Shootoff</h3><p>Our two-day community shoot, open to all ages and skill levels. It's a fun day on the range that helps support the team. (2026: the 4th annual, September 19–20)</p><p class="where">Wealthwood Rod &amp; Gun Club</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Questions from families</div>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Does my child need experience?</summary><p>No. Many of our shooters started with ACES having never shot before. Coaches start with safety and the basics and go at each athlete's pace.</p></details>
+      <details><summary>What ages can join?</summary><p>ACES is for students in grades 5–12. SCTP groups athletes into divisions by grade, and our coaches help place each shooter.</p></details>
+      <details><summary>Where do you practice?</summary><p>Our home range is the Wealthwood Rod &amp; Gun Club. Spring classes and practices, summer practices, the ACES Open and the ACES Shootoff are all held there.</p></details>
+      <details><summary>Is it safe?</summary><p>Safety is the first thing we teach and the first rule at every practice and competition. Shooters follow strict range rules under adult supervision, and eye and ear protection are required.</p></details>
+      <details><summary>Do we need to buy a shotgun right away?</summary><p>Please talk to us before buying anything. Coaches can help you find the right fit for your shooter and explain what equipment is needed to get started.</p></details>
+      <details><summary>What does it cost?</summary><p>First-year shooters sign up for the Community Education classes, and the fee is posted with the classes. Returning shooters pay a $35 SCTP registration fee for Advanced Class practices. Other costs, like shells and event entry fees, depend on how much a shooter competes. Email us and we'll walk you through a typical season.</p></details>
+      <details><summary>When are practices?</summary><p>Spring classes and practices run from late March through April. Summer practices are Mondays, 4–8 pm, from June through August, with extra Friday practices for shooters heading to Nationals. See the schedule above for a typical year.</p></details>
+      <details><summary>Can my child shoot for ACES and another team?</summary><p>Yes. Many of our shooters also shoot for their school's High School Clay Target League team or with 4-H. More rounds means more coaching and more competition.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <div class="wrap">
+    <div class="stack">
+      <div class="eyebrow">Join the ACES</div>
+      <h2>We're always looking for new shooters</h2>
+      <p>If your student is curious about trap, skeet or sporting clays, reach out. We're happy to answer questions, invite you to a practice and help you get started.</p>
+    </div>
+    <div class="contact">
+      <h3>Contact the team</h3>
+      <div class="copy"><code id="email">aitkincountyelitesharpshooters@gmail.com</code><button id="copy-email" type="button">Copy</button></div>
+      <a class="btn primary" href="mailto:aitkincountyelitesharpshooters@gmail.com?subject=Interested%20in%20joining%20ACES">Email us</a>
+      <a class="btn ghost" href="https://www.facebook.com/AitkinCountyEliteSharpshooters" target="_blank" rel="noopener">Follow ACES on Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Aitkin County Elite Sharpshooters · Aitkin County, Minnesota</span>
+    <span><a href="https://bennelli25.github.io/aces-rankings/">ACES Score Rankings</a> · <a href="https://sssfonline.org/" target="_blank" rel="noopener">About SCTP (SSSF)</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy-email').onclick=function(){
+  var b=this,el=document.getElementById('email');
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent='Copied'},sel)}catch(e){sel()}
+};
+</script>
+</body>
+</html>
