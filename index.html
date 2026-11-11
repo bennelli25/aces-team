@@ -126,6 +126,12 @@ summary::after{content:"+";color:var(--orange);font-size:1.5rem;line-height:1}
 details[open] summary::after{content:"–"}
 details p{padding-bottom:14px;color:var(--muted)}
 
+/* donate */
+.donate{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.donate > *{min-width:0}
+.donate-box{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:6px;padding:24px;display:grid;gap:12px;justify-items:start}
+@media (max-width:860px){.donate{grid-template-columns:1fr}}
+
 /* join */
 .join{background:var(--orange);color:#1c1c1d}
 .join .eyebrow{color:#1c1c1d}
@@ -160,7 +166,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   <div class="wrap">
     <a class="brand" href="#top" aria-label="ACES home"><img src="logo.png" alt="">ACES</a>
     <nav aria-label="Sections">
-      <a href="#about">About</a><a href="#sctp">SCTP</a><a href="#approach">Our approach</a><a href="#start">Get started</a><a href="#season">Schedule</a><a href="#faq">FAQ</a><a class="cta" href="#join">Join</a>
+      <a href="#about">About</a><a href="#sctp">SCTP</a><a href="#approach">Our approach</a><a href="#start">Get started</a><a href="#season">Schedule</a><a href="#faq">FAQ</a><a href="#donate">Donate</a><a class="cta" href="#join">Join</a>
     </nav>
   </div>
 </header>
@@ -324,6 +330,24 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   </div>
 </section>
 
+<section id="donate">
+  <div class="wrap">
+    <div class="donate">
+      <div class="stack">
+        <div class="eyebrow">Support the team</div>
+        <h2>Help keep our shooters on the line</h2>
+        <p>ACES has a team endowment with the MidwayUSA Foundation, a 501(c)(3) public charity that supports youth shooting sports. Every donation grows our endowment, which pays the team a cash grant every year, and gifts are eligible to be matched.</p>
+        <p>Donations help keep the sport affordable for every family. Any amount is <b>greatly appreciated</b>. Thank you!</p>
+      </div>
+      <div class="donate-box">
+        <a class="btn primary" href="https://www.midwayusafoundation.org/team-profile/?id=R22368" target="_blank" rel="noopener">Donate to ACES</a>
+        <p class="note">Opens the ACES team page on the MidwayUSA Foundation site. Team ID: R22368.</p>
+        <p class="note">Their sweepstakes calendar also supports ACES: each one is a $50 donation to our team and an entry in their 52-gun giveaway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="join" class="join">
   <div class="wrap">
     <div class="stack">
@@ -344,7 +368,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <footer>
   <div class="wrap">
     <span>Aitkin County Elite Sharpshooters · Aitkin County, Minnesota</span>
-    <span><a href="https://bennelli25.github.io/aces-rankings/">ACES Score Rankings</a> · <a href="https://sssfonline.org/" target="_blank" rel="noopener">About SCTP (SSSF)</a></span>
+    <span><a href="https://www.midwayusafoundation.org/team-profile/?id=R22368" target="_blank" rel="noopener">Donate (MidwayUSA Foundation)</a> · <a href="https://bennelli25.github.io/aces-rankings/">ACES Score Rankings</a> ·<a href="https://sssfonline.org/" target="_blank" rel="noopener">About SCTP (SSSF)</a></span>
   </div>
 </footer>
 
